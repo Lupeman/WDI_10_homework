@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+
+  <script>
+// 1. Define a function maxOfTwoNumbers that takes two numbers
+// as arguments and returns the largest of them.
+
+function maxOfTwoNumbers(num1,num2){
+  var maxOfTwoNumbers = Math.max(num1,num2);
+  return maxOfTwoNumbers;
+}
+
+// 2. Define a function maxOfThree that takes three
+// numbers as arguments and returns the largest of them.
+
+function maxOfThree(num1, num2, num3) {
+  var maxOfThree = Math.max(num1, num2, num3);
+  return maxOfThree;
+}
+
+// 3. Write a function isCharacterAVowel that takes a character
+// (e.g. a string with length of 1) and returns true if it is a vowel,
+// and false if it is newAccount.
+
+function isCharacterAVowel(word) {
+  var checkForMatch = word.match(/aeiouAEIOU/g)
+  if (checkForMatch = word){
+    return true;
+  }else{
+    return false;
+  }
+}
+
+function isCharacterAVowel(word) {
+  if (word = "a" || "e" || "i" || "o" || "u" || "A" || "E" || "I" || "O" || "U"){
+    return true;
+  }else{
+    return false;
+  }
+}
+
+// 4. Define a function sumArray and a function multiplyArray that sums and
+// multiplies all the numbers in an array of numbers. e.g. sumArray([1,2,3,4])
+// should return 10 and multiplyArray([1,2,3,4]) should return 24.
+
+function sumArray (arr) {
+  var answer = arr.reduce(function(a,b){
+    return a+b;
+  })
+return answer;
+}
+function multiplyArray (arr) {
+  var multiplyAnswer = arr.reduce(function(a,b) {
+     return a * b;
+  })
+  return multiplyAnswer;
+}
+
+// 5. Write a function that returns the number of arguments passed to the function when called
+
+function howManyArguments(){
+  return arguments.length
+}
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+</html>
