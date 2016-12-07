@@ -1,0 +1,41 @@
+body {
+  padding:30px;
+  color:#B5B5B5;
+}
+
+.wrapper {
+  width:960px;
+}
+.companyLogo {
+  padding-bottom:10px;
+}
+
+.image-container {
+
+}
+
+.firstImageWithGirl, .secondImageWithRings {
+  float:left;
+  margin-bottom: 5px;
+}
+
+clearfix .image-container::before, .image-container::after {
+    content:"";
+    display:table;
+}
+.image-container::after {
+    clear:both;
+}
+.container {
+    zoom:1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+a {
+  text-decoration: none;
+}
+/*.logo-container {
+  text-align:center;
+}*/
+.logo {
+  border: 5px solid #B5B5B5;
+}

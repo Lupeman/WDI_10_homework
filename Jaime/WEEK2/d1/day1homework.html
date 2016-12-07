@@ -31,14 +31,30 @@ function maxOfThree(num1, num2, num3) {
 // and false if it is newAccount.
 
 function isCharacterAVowel(word) {
-  var checkForMatch = word.match(/aeiouAEIOU/g)
-  if (checkForMatch = word){
+  if(word.length === 1){
+    var checkForMatch = word.match(/aeiouAEIOU/)
+    if (checkForMatch = word){
     return true;
-  }else{
+    }else{
     return false;
+    }
+  }else{
+  return false;
   }
 }
-
+//------------------------------------------------
+var isCharacterAVowel = function(string) {
+  var vowels = ["a","e","i","o","u"];
+if (string.length !== 1) {
+   alert("You provided a string with more than one character.");
+ } else if (vowels.includes(string)) {
+   return true;
+ }
+ else {
+   return false;
+ }
+}
+//-------------------------------------------------
 function isCharacterAVowel(word) {
   if (word = "a" || "e" || "i" || "o" || "u" || "A" || "E" || "I" || "O" || "U"){
     return true;

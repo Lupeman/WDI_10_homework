@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Object Constructor - Kids Driving You Crazy </title>
+  </head>
+  <body style = "background-color:#00C8F8;">
+    <div style = "padding: 20px;">
+      <h1 style = "font-family: Arial Black; color: #ffffff;">Are your kids driving you crazy?</h1>
+      <p style = "font-family: Arial;font-size:25px; color: #ffffff;">Breakfast. Clean up. Snack time. Baby needs a diaper change and toddler is screaming they need help on the potty. Clean up. Lunch time. Clean up. Find red shirt. Needs blue shirt. Dinner time. Toddler decides he doesn't want any shirt. Clean up. Snack before bed. Clean up.</p>
+      <p style = "font-family: Arial; font-size:20px; color: #ffffff;">Answer a few simple questions - and we'll tell you just how bad you've got it!</p>
+    </div>
+    <div style = "text-align:center;">
+      <button style="font-family: Arial Black; font-size: 15px;">Click here to start</button>
+    </div>
+    <div style="text-align:center; padding:50px;">
+      <img src="http://cdn.someecards.com/someecards/usercards/1332899198853_2906308.png" height="300"/>
+    </div>
+    <script>
+    var begin = function() {
+        function needADrink(levelOfTantrum, numberOfKids, timeOfDay) {
+          this.levelOfTantrum = levelOfTantrum,
+          this.numberOfKids = numberOfKids,
+          this.timeOfDay = timeOfDay,
+          this.stressLevel = parseInt(prompt("how stressed are you from 1 to 10?")),
+          this.whatDoIDo = function() {
+            if(this.stressLevel < 5) {
+              alert("Take a deep breath, and pour yourself a glass of wine");
+            }else if (this.stressLevel === 5) {
+              alert("Goddamn kids, go to another room and bring a bottle");
+            }else{
+              alert("Urgh...hide in the pantry and crack open the gin.");
+            }
+          };
+        }
+        var myLife = new needADrink(
+          prompt("How nuts are your kids on a scale of 1 to 5"), prompt("How many kids do you have?"), prompt("Is it morning, afternoon or night?"));
+
+        alert(myLife.whatDoIDo());
+      }
+        var start = document.querySelector('button');
+        start.addEventListener('click', begin );
+
+    </script>
+  </body>
+</html>
