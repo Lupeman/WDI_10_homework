@@ -1,39 +1,58 @@
 class Calculator
+  attr_accessor :value1, :value2, :operator_info
 
-attr_accessor :value1, :value2, :operator
+  # def operator_info
+  #   return @operator_info
+  # end
+  #
+  # def operator_info=(value)
+  #   @operator_info = value
+  # end
+  # def initialize(value1, value2, operator)
+  #   @value1 = value1
+  #   @value2 = value2
+  #   @operator = operator
+  # end
 
-# def initialize(value1, value2, operator)
-#   @value1 = value1
-#   @value2 = value2
-#   @operator = operator
-# end
-
-def add
-answer_string = @value1 + @value2
-puts answer_string
-puts "#{@value1} + #{@value2} = #{answer_string}"
-end
-
-def subtract
-answer_string = @value1 - @value2
-puts "#{@value1} - #{@value2} = #{answer_string}"
-end
-
-def multiply
-  answer_string = @value1 * @value2
-  puts "#{@value1} * #{@value2} = #{answer_string}"
-end
-
-def divide
-  answer_string = @value1 / @value2
-  puts "#{@value1} / #{@value2} = #{answer_string}"
-end
-
-def perform_task
-  puts operator_info
-  if @operator_info == "add"
-puts @operator_info
+  def add
+    answer_string = @value1 + @value2
+    puts "#{@value1} + #{@value2} = #{answer_string}"
+    try_again
   end
-end
 
+  def subtract
+    answer_string = @value1 - @value2
+    puts "#{@value1} - #{@value2} = #{answer_string}"
+    try_again
+  end
+
+  def multiply
+    answer_string = @value1 * @value2
+    puts "#{@value1} * #{@value2} = #{answer_string}"
+    try_again
+  end
+
+  def divide
+    answer_string = @value1 / @value2
+    puts "#{@value1} / #{@value2} = #{answer_string}"
+    try_again
+  end
+
+  def quit
+    puts "Exiting now..."
+  end
+
+  def perform_task
+    if @operator_info == "add"
+      add
+    elsif @operator_info == "subtract"
+      subtract
+    elsif @operator_info == "multiply"
+      multiply
+    elsif @operator_info == "divide"
+      divide
+    else
+      quit
+    end
+  end
 end
