@@ -5,21 +5,56 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Movie Search App</title>
-        <!-- <link rel="stylesheet" href="/css/style.css"> -->
+      <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Permanent+Marker" rel="stylesheet">
+        <link rel="stylesheet" href="/css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
       </head>
   <body>
-
+    <div class="nav">
+      <ul>
+        <li><a href="#">Coming Soon</a></li>
+        <li><a href="#">Most Popular</a></li>
+      </ul>
+    </div>
+    <div class="headerDiv">
+<h1 class="header"><span class="all">All</span> movies. <span class="all">All</span> the time.</h1>
+<div class="aboutSiteText">
+<p>Can't remember that guy in that movie you just saw? No worries - we've got you covered! Just enter the name of the movie below and we'll do the rest. </p>
+</div>
 <form action="/" method="get">
-  <p>Movie Name: <input type="text" name="movie" size="20" class="inputField">
+  <p><span>Movie Name:</span> <input type="text" name="movie" size="20" height="10px" class="inputField">
     <input type="submit" class="submitBtn"></p>
   </form>
+</div>
 
-  <!-- <p>Movie Info: <%= @movie_info %></p> -->
+<div class="hidden">
+  <p><span>Title:</span> <%= @movie_title %></p>
+  <p><span>Year:</span> <%= @movie_year %></p>
+  <p><span>Plot:</span> <%= @movie_plot %></p>
+  <p><a href="#">Click here to see more information:</a></p>
+  </div>
+  <div id="seeMore">
+    <p><span class="seeMoreKeys">Rated:</span> <%= @movie_rated %></p>
+    <p><span class="seeMoreKeys">Released:</span> <%= @movie_released %></p>
+    <p><span class="seeMoreKeys">Runtime:</span> <%= @movie_runtime %></p>
+    <p><span class="seeMoreKeys">Genre:</span> <%= @movie_genre %></p>
+    <p><span class="seeMoreKeys">Director:</span> <%= @movie_director %></p>
+    <p><span class="seeMoreKeys">Writer:</span> <%= @movie_writer %></p>
+    <p><span class="seeMoreKeys">Actors:</span> <%= @movie_actors %></p>
+  </div>
 
 
-
-
-
-
+<script>
+  $(document).ready(function() {
+    // $("a").click(function(event) {
+    //   event.preventDefault();
+    //   $("#seeMore").toggle();
+    // });
+    $(".submitBtn").click(function(event) {
+      event.preventDefault();
+      $(".hidden").toggleClass(".details");
+    });
+  });
+</script>
   </body>
 </html>
