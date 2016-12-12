@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Permanent+Marker" rel="stylesheet">
+  <link rel="stylesheet" href="/css/movie_info_style.css">
+</head>
+<body>
+
+
+  <div class="movie_info">
+    <% @movie_info["Search"].each do |element|  %>
+      <% element.each do |key, value| %>
+        <% if key == "Title" %>
+          <span class= "title"><%= key %></span>
+          <span class= "name"><a href="/movie?param1=<%= value %>"><%= value %></a></span></br>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
+
+
+  <!-- <div class="movie_info">
+    <% @movie_info["Search"].each do |element|  %>
+      <% element.each do |key, value| %>
+        <% if key == "Title" %>
+          <span class= "title"><%= key %></span>
+          <span class= "name"><a href="/movie?param1=<%= value %>"><%= value %></a></span></br>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div> -->
+
+
+
+</body>
+</html>
