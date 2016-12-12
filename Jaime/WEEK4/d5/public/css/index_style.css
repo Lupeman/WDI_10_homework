@@ -6,11 +6,12 @@ body {
   background-position: center;
   background-color: rgba(0, 0, 0, 0.2);
 }
-
+.logo {
+  text-align: left;
+}
 .nav {
     text-align: right;
     padding-right: 10px;
-    /*margin-top: 20px;*/
 }
 
 li {
@@ -62,10 +63,8 @@ form {
 .submitBtn {
   font-family: 'Montserrat', sans-serif;
 }
-.hidden {
-  display: none;
-}
-.details {
+
+.details, .movie_info {
   width:450px;
   padding-left: 20px;
   margin-top: 70px;

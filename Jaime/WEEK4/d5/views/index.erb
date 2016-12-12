@@ -6,11 +6,12 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Movie Search App</title>
       <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Permanent+Marker" rel="stylesheet">
-        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/index_style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
       </head>
   <body>
     <div class="nav">
+      <img src="./logo-movie-app.png"/ class="logo">
       <ul>
         <li><a href="#">Coming Soon</a></li>
         <li><a href="#">Most Popular</a></li>
@@ -21,40 +22,25 @@
 <div class="aboutSiteText">
 <p>Can't remember that guy in that movie you just saw? No worries - we've got you covered! Just enter the name of the movie below and we'll do the rest. </p>
 </div>
-<form action="/" method="get">
-  <p><span>Movie Name:</span> <input type="text" name="movie" size="20" height="10px" class="inputField">
+<form action="/movie" method="get">
+  <p><span>Movie Name:</span> <input type="text" name="title" size="20" height="10px" class="inputField">
     <input type="submit" class="submitBtn"></p>
   </form>
 </div>
 
-<div class="hidden">
-  <p><span>Title:</span> <%= @movie_title %></p>
-  <p><span>Year:</span> <%= @movie_year %></p>
-  <p><span>Plot:</span> <%= @movie_plot %></p>
-  <p><a href="#">Click here to see more information:</a></p>
-  </div>
-  <div id="seeMore">
-    <p><span class="seeMoreKeys">Rated:</span> <%= @movie_rated %></p>
-    <p><span class="seeMoreKeys">Released:</span> <%= @movie_released %></p>
-    <p><span class="seeMoreKeys">Runtime:</span> <%= @movie_runtime %></p>
-    <p><span class="seeMoreKeys">Genre:</span> <%= @movie_genre %></p>
-    <p><span class="seeMoreKeys">Director:</span> <%= @movie_director %></p>
-    <p><span class="seeMoreKeys">Writer:</span> <%= @movie_writer %></p>
-    <p><span class="seeMoreKeys">Actors:</span> <%= @movie_actors %></p>
-  </div>
 
 
-<script>
+<!-- <script>
   $(document).ready(function() {
-    // $("a").click(function(event) {
-    //   event.preventDefault();
-    //   $("#seeMore").toggle();
-    // });
-    $(".submitBtn").click(function(event) {
+    $("a").click(function(event) {
       event.preventDefault();
-      $(".hidden").toggleClass(".details");
+      $("#seeMore").toggle();
+    });
+    $(".submitBtn").click(function(event) {
+      // event.preventDefault();
+      $(".hidden").toggleClass("details");
     });
   });
-</script>
+</script> -->
   </body>
 </html>
