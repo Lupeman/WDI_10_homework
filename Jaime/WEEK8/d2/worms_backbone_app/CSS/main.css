@@ -1,0 +1,79 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Cabin', sans-serif;
+}
+
+body {
+  padding:20px;
+}
+
+.header {
+  background-image: url('/images/worm-background.jpg');
+  padding-left: 35px;
+}
+.input {
+  width: 250px;
+  font-size: 15px;
+  padding:5px;
+  margin-bottom: 10px;
+}
+
+#addWormBtn {
+  font-family: 'Cabin', sans-serif;
+  font-size: 15px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: gold;
+}
+
+#addWormBtn:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.addInfo {
+  width: 35%;
+}
+
+.text {
+  -ms-transform: rotate(-10deg); /* IE 9 */
+    -webkit-transform: rotate(-10deg); /* Chrome, Safari, Opera */
+    transform: rotate(-10deg);
+}
+
+.blurb {
+  font-size: 50px;
+  font-family: 'Permanent Marker', cursive;
+  text-align: center;
+}
+img {
+  width:100px;
+  transition: all .2s ease-in-out;
+}
+
+img:hover {
+  transform: scale(1.5);
+}
+
+.info {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.name {
+  font-size: 25px;
+}
+
+.type {
+  font-size: 18px;
+  font-style: italic;
+}
+h2 {
+  font-size: 18px;
+}
+
+#listBox{
+  padding-top: 30px;
+  padding-left: 20px;
+  width: 100%;
+}

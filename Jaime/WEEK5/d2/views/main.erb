@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="container" id="add_video_container">
+          <div class="row">
+            <div class="col-md-7">
+              <div class="greeting">Add your favourite videos to </br> your collection so you can </br> rewatch them anytime!
+              <img src="arrow2.png" class="arrow">
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="row">
+                <form action="/main" method="post">
+                  <div class="col-md-5">
+                    <span class="add_video_header">Title</span>
+                    </br>
+                    <input type="text" name="title" class="input_box"/>
+                  </div>
+              </div>
+              <div class="row">
+                <div class="col-md-5">
+                </br>
+                  <span class="add_video_header">Description</span>
+                  </br>
+                  <textarea rows="4" cols="50" name="description" class="input_box"/></textarea>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-5">
+                </br>
+                  <span class="add_video_header">URL</span>
+                  </br>
+                  <input type="text" name="url" class="input_box"/>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-5">
+                  </br>
+                  <button type="submit">Submit</button>
+                </div>
+              </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+</body>
+</html>

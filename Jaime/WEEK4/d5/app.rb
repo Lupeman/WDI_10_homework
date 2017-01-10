@@ -10,7 +10,11 @@ end
 get "/movie_list" do
   @movie = params[:title]
   @movie_info = HTTParty.get("http://omdbapi.com/?s=#{@movie}")
-  erb :movie_list
+  if @movie_info["Search"].length > 1
+    erb :movie_list
+  else
+  redirect to("/movie?param1=#{@movie}")
+  end
 end
 
 get "/movie" do

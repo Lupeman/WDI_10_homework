@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Worms!</title>
+<link href="https://fonts.googleapis.com/css?family=Cabin|Permanent+Marker" rel="stylesheet">
+  <link rel="stylesheet" href="/CSS/main.css">
+</head>
+<body>
+  <table class="header">
+    <tr>
+      <td class="addInfo">
+        <h1>Worm Collection</h1>
+        <h2>Add your new worms</h2>
+
+        <input type="text" class="input" id="addWormName" placeholder="worm name"></br>
+        <input type="text" class="input" id="addWormType" placeholder="worm type"></br>
+        <input type="text" class="input" id="addWormImage" placeholder="worm image url">
+        <button id="addWormBtn">Add Worm!</button>
+      </td>
+      <td class="text">
+        <h1 class="blurb">Create your own Wormtastic characters!</h1>
+      </td>
+    </tr>
+  </table>
+
+  <table id="listBox">
+    <tr id="list">
+    </tr>
+  </table>
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="http://underscorejs.org/underscore-min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
+  <script src="http://backbonejs.org/backbone-min.js"></script>
+  <script src="/javascript/models/worms.js"></script>
+  <script src="/javascript/templates.js"></script>
+  <script src="/javascript/views/ListItemView.js"></script>
+  <script src="/javascript/app.js"></script>
+
+</body>
+</html>

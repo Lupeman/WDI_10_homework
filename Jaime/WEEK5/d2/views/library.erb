@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <span class="table_header">Title</span>
+    </div>
+    <div class="col-md-8">
+      <span class="table_header">Description</span>
+    </div>
+  </div>
+  <div class="row">
+    <% @listings.each do |listing| %>
+    <div class="col-md-4"><a href="/movie/<%= listing['id'] %>"><%= listing["title"] %></a>
+    </div>
+    <div class="col-md-8"><%= listing["description"] %>
+    </div>
+    <% end %>
+  </div>
+</div>

@@ -22,7 +22,12 @@
   <img class="poster" src= "<%= @movie_poster %>">
 </div>
 
-
+<form>
+    <input type="button" value="Go Back" onClick="history.go(-1); return true;">
+</form>
+<form>
+    <input type="button" value="Start Again" onClick="history.go(-2); return true;">
+</form>
 
 
 </body>
